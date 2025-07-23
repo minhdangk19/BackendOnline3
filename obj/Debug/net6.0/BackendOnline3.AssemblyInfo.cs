@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackendOnline3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e119426c69c76d9245be56770fcbf508934020aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackendOnline3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackendOnline3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

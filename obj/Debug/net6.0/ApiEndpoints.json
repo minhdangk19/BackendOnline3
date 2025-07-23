@@ -1,0 +1,677 @@
+[
+  {
+    "ContainingType": "BackendOnline3.Controllers.AllowAccessController",
+    "Method": "GetAll",
+    "RelativePath": "api/AllowAccess",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.AllowAccessController",
+    "Method": "Create",
+    "RelativePath": "api/AllowAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "allowAccessDto",
+        "Type": "BackendOnline3.Dtos.AllowAccessRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.AllowAccessController",
+    "Method": "Get",
+    "RelativePath": "api/AllowAccess/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.AllowAccessController",
+    "Method": "Update",
+    "RelativePath": "api/AllowAccess/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "allowAccessDto",
+        "Type": "BackendOnline3.Dtos.AllowAccessRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.AllowAccessController",
+    "Method": "Delete",
+    "RelativePath": "api/AllowAccess/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "BackendOnline3.Dtos.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.InternController",
+    "Method": "GetAll",
+    "RelativePath": "api/Intern",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchQuery",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.InternController",
+    "Method": "Create",
+    "RelativePath": "api/Intern",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "InternName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageData",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternMail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternMailReplace",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "University",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CitizenIdentification",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CitizenIdentificationDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Major",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Internable",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullTime",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cvfile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternSpecialized",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelephoneNum",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegisteredDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "HowToKnowAlta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ForeignLanguage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "YearOfExperiences",
+        "Type": "System.Nullable\u00601[[System.Int16, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReadyToWork",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternEnabled",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EntranceTest",
+        "Type": "System.Nullable\u00601[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Introduction",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LinkProduct",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JobFields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HiddenToEnterprise",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.InternController",
+    "Method": "Get",
+    "RelativePath": "api/Intern/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.InternController",
+    "Method": "Update",
+    "RelativePath": "api/Intern/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "InternName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageData",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternMail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternMailReplace",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "University",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CitizenIdentification",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CitizenIdentificationDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Major",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Internable",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullTime",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cvfile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternSpecialized",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelephoneNum",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegisteredDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "HowToKnowAlta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ForeignLanguage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "YearOfExperiences",
+        "Type": "System.Nullable\u00601[[System.Int16, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReadyToWork",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "InternEnabled",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EntranceTest",
+        "Type": "System.Nullable\u00601[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Introduction",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LinkProduct",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JobFields",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HiddenToEnterprise",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.InternController",
+    "Method": "Delete",
+    "RelativePath": "api/Intern/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.RoleController",
+    "Method": "GetAll",
+    "RelativePath": "api/Role",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.RoleController",
+    "Method": "Create",
+    "RelativePath": "api/Role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleDto",
+        "Type": "BackendOnline3.Dtos.RoleRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.RoleController",
+    "Method": "Get",
+    "RelativePath": "api/Role/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.RoleController",
+    "Method": "Update",
+    "RelativePath": "api/Role/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "roleDto",
+        "Type": "BackendOnline3.Dtos.RoleRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.RoleController",
+    "Method": "Delete",
+    "RelativePath": "api/Role/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchQuery",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.UserController",
+    "Method": "Create",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "BackendOnline3.Dtos.UserRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.UserController",
+    "Method": "Get",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userDto",
+        "Type": "BackendOnline3.Dtos.UserRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BackendOnline3.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BackendOnline3.WeatherForecast, BackendOnline3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

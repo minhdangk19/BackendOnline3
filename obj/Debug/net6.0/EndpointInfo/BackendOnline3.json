@@ -1,0 +1,1175 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "BackendOnline3 API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/AllowAccess": {
+      "get": {
+        "tags": [
+          "AllowAccess"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "AllowAccess"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AllowAccess/{id}": {
+      "get": {
+        "tags": [
+          "AllowAccess"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "AllowAccess"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllowAccessRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "AllowAccess"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Intern": {
+      "get": {
+        "tags": [
+          "Intern"
+        ],
+        "parameters": [
+          {
+            "name": "searchQuery",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Intern"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "InternName": {
+                    "maxLength": 255,
+                    "minLength": 3,
+                    "type": "string"
+                  },
+                  "InternAddress": {
+                    "type": "string"
+                  },
+                  "ImageData": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "InternMail": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "InternMailReplace": {
+                    "type": "string"
+                  },
+                  "University": {
+                    "type": "string"
+                  },
+                  "CitizenIdentification": {
+                    "type": "string"
+                  },
+                  "CitizenIdentificationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Major": {
+                    "type": "string"
+                  },
+                  "Internable": {
+                    "type": "boolean"
+                  },
+                  "FullTime": {
+                    "type": "boolean"
+                  },
+                  "Cvfile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "InternSpecialized": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "TelephoneNum": {
+                    "type": "string",
+                    "format": "tel"
+                  },
+                  "InternStatus": {
+                    "type": "string"
+                  },
+                  "RegisteredDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "HowToKnowAlta": {
+                    "type": "string"
+                  },
+                  "InternPassword": {
+                    "type": "string"
+                  },
+                  "ForeignLanguage": {
+                    "type": "string"
+                  },
+                  "YearOfExperiences": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PasswordStatus": {
+                    "type": "boolean"
+                  },
+                  "ReadyToWork": {
+                    "type": "boolean"
+                  },
+                  "InternEnabled": {
+                    "type": "boolean"
+                  },
+                  "EntranceTest": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "Introduction": {
+                    "type": "string"
+                  },
+                  "Note": {
+                    "type": "string"
+                  },
+                  "LinkProduct": {
+                    "type": "string"
+                  },
+                  "JobFields": {
+                    "type": "string"
+                  },
+                  "HiddenToEnterprise": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "InternName": {
+                  "style": "form"
+                },
+                "InternAddress": {
+                  "style": "form"
+                },
+                "ImageData": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "InternMail": {
+                  "style": "form"
+                },
+                "InternMailReplace": {
+                  "style": "form"
+                },
+                "University": {
+                  "style": "form"
+                },
+                "CitizenIdentification": {
+                  "style": "form"
+                },
+                "CitizenIdentificationDate": {
+                  "style": "form"
+                },
+                "Major": {
+                  "style": "form"
+                },
+                "Internable": {
+                  "style": "form"
+                },
+                "FullTime": {
+                  "style": "form"
+                },
+                "Cvfile": {
+                  "style": "form"
+                },
+                "InternSpecialized": {
+                  "style": "form"
+                },
+                "TelephoneNum": {
+                  "style": "form"
+                },
+                "InternStatus": {
+                  "style": "form"
+                },
+                "RegisteredDate": {
+                  "style": "form"
+                },
+                "HowToKnowAlta": {
+                  "style": "form"
+                },
+                "InternPassword": {
+                  "style": "form"
+                },
+                "ForeignLanguage": {
+                  "style": "form"
+                },
+                "YearOfExperiences": {
+                  "style": "form"
+                },
+                "PasswordStatus": {
+                  "style": "form"
+                },
+                "ReadyToWork": {
+                  "style": "form"
+                },
+                "InternEnabled": {
+                  "style": "form"
+                },
+                "EntranceTest": {
+                  "style": "form"
+                },
+                "Introduction": {
+                  "style": "form"
+                },
+                "Note": {
+                  "style": "form"
+                },
+                "LinkProduct": {
+                  "style": "form"
+                },
+                "JobFields": {
+                  "style": "form"
+                },
+                "HiddenToEnterprise": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Intern/{id}": {
+      "get": {
+        "tags": [
+          "Intern"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Intern"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "InternName": {
+                    "maxLength": 255,
+                    "minLength": 3,
+                    "type": "string"
+                  },
+                  "InternAddress": {
+                    "type": "string"
+                  },
+                  "ImageData": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "InternMail": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "InternMailReplace": {
+                    "type": "string"
+                  },
+                  "University": {
+                    "type": "string"
+                  },
+                  "CitizenIdentification": {
+                    "type": "string"
+                  },
+                  "CitizenIdentificationDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Major": {
+                    "type": "string"
+                  },
+                  "Internable": {
+                    "type": "boolean"
+                  },
+                  "FullTime": {
+                    "type": "boolean"
+                  },
+                  "Cvfile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "InternSpecialized": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "TelephoneNum": {
+                    "type": "string",
+                    "format": "tel"
+                  },
+                  "InternStatus": {
+                    "type": "string"
+                  },
+                  "RegisteredDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "HowToKnowAlta": {
+                    "type": "string"
+                  },
+                  "InternPassword": {
+                    "type": "string"
+                  },
+                  "ForeignLanguage": {
+                    "type": "string"
+                  },
+                  "YearOfExperiences": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PasswordStatus": {
+                    "type": "boolean"
+                  },
+                  "ReadyToWork": {
+                    "type": "boolean"
+                  },
+                  "InternEnabled": {
+                    "type": "boolean"
+                  },
+                  "EntranceTest": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "Introduction": {
+                    "type": "string"
+                  },
+                  "Note": {
+                    "type": "string"
+                  },
+                  "LinkProduct": {
+                    "type": "string"
+                  },
+                  "JobFields": {
+                    "type": "string"
+                  },
+                  "HiddenToEnterprise": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "InternName": {
+                  "style": "form"
+                },
+                "InternAddress": {
+                  "style": "form"
+                },
+                "ImageData": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "InternMail": {
+                  "style": "form"
+                },
+                "InternMailReplace": {
+                  "style": "form"
+                },
+                "University": {
+                  "style": "form"
+                },
+                "CitizenIdentification": {
+                  "style": "form"
+                },
+                "CitizenIdentificationDate": {
+                  "style": "form"
+                },
+                "Major": {
+                  "style": "form"
+                },
+                "Internable": {
+                  "style": "form"
+                },
+                "FullTime": {
+                  "style": "form"
+                },
+                "Cvfile": {
+                  "style": "form"
+                },
+                "InternSpecialized": {
+                  "style": "form"
+                },
+                "TelephoneNum": {
+                  "style": "form"
+                },
+                "InternStatus": {
+                  "style": "form"
+                },
+                "RegisteredDate": {
+                  "style": "form"
+                },
+                "HowToKnowAlta": {
+                  "style": "form"
+                },
+                "InternPassword": {
+                  "style": "form"
+                },
+                "ForeignLanguage": {
+                  "style": "form"
+                },
+                "YearOfExperiences": {
+                  "style": "form"
+                },
+                "PasswordStatus": {
+                  "style": "form"
+                },
+                "ReadyToWork": {
+                  "style": "form"
+                },
+                "InternEnabled": {
+                  "style": "form"
+                },
+                "EntranceTest": {
+                  "style": "form"
+                },
+                "Introduction": {
+                  "style": "form"
+                },
+                "Note": {
+                  "style": "form"
+                },
+                "LinkProduct": {
+                  "style": "form"
+                },
+                "JobFields": {
+                  "style": "form"
+                },
+                "HiddenToEnterprise": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Intern"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Role": {
+      "get": {
+        "tags": [
+          "Role"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Role"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Role/{id}": {
+      "get": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "searchQuery",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AllowAccessRequestDto": {
+        "required": [
+          "accessProperties",
+          "roleId",
+          "tableName"
+        ],
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "tableName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "accessProperties": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequestDto": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleRequestDto": {
+        "required": [
+          "roleName"
+        ],
+        "type": "object",
+        "properties": {
+          "roleName": {
+            "maxLength": 100,
+            "minLength": 3,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserRequestDto": {
+        "required": [
+          "fullName",
+          "password",
+          "roleId"
+        ],
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "maxLength": 255,
+            "minLength": 3,
+            "type": "string"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "password": {
+            "maxLength": 100,
+            "minLength": 6,
+            "type": "string"
+          },
+          "roleId": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Vui lòng nhập token JWT theo định dạng: Bearer <token>",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
